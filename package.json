@@ -14,6 +14,7 @@
     "dev:chat": "ts-node chat-server.ts",
     "start:chat": "npx tsx chat-server.ts",
     "deploy": "npm run build && pm2 restart tonghana || pm2 start npm --name tonghana -- start && pm2 restart chat || pm2 start 'npx tsx chat-server.ts' --name chat",
+    "postinstall": "prisma generate",
     "seed": "tsx prisma/seed.ts",
     "test": "jest",
     "test:watch": "jest --watch",
